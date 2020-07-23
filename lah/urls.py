@@ -19,9 +19,6 @@ from rest_framework import routers
 from lah.resources import views
 
 router = routers.DefaultRouter()
-router.register('resources', views.ResourceViewSet)
+router.register("resources", views.ResourceViewSet)
 
-urlpatterns = [
-    path('', include(router.urls)),
-    path('admin/', admin.site.urls),
-]
+urlpatterns = [path("", include(router.urls)), path("admin/", admin.site.urls)]

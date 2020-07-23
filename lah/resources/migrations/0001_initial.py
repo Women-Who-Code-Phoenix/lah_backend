@@ -7,17 +7,31 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Resource',
+            name="Resource",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('description', models.CharField(max_length=528)),
-                ('name', models.CharField(max_length=256)),
-                ('status', models.CharField(choices=[('active', 'Active'), ('pending', 'Pending')], default='active', max_length=16)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("description", models.CharField(max_length=528)),
+                ("name", models.CharField(max_length=256)),
+                (
+                    "status",
+                    models.CharField(
+                        choices=[("active", "Active"), ("pending", "Pending")],
+                        default="active",
+                        max_length=16,
+                    ),
+                ),
             ],
-        ),
+        )
     ]
